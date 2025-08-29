@@ -93,3 +93,19 @@ resource "aws_security_group" "rds_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+output "public_subnet_id" {
+  value = aws_subnet.public.id
+}
+
+output "private_subnet_id" {
+  value = aws_subnet.public.id
+}
+
+output "ec2_sg_id" {
+  value = aws_security_group.ec2_sg.id
+}
+
+output "rds_sg_id" {
+  value = aws_security_group.rds_sg.id
+}
